@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Zump</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="previous">Previous</string>
+
+    <string name="http_error">The server responded with improper data. Contact your administrator.</string>
+    <!--<string name="default_error">There is some error. Please load the application again. And if problem persists, contact your administrator.</string>-->
+    <string name="default_error">Network Connection ERROR !!!. Check Your Network Link.</string>
+    <string name="server_error">Unable to connect with the server. Try again after some time.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+</resources>

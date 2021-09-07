@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlFilter"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/bottom_curved_rectangle_with_grey_gradient">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblVendor"
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="Select Vendor"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerVendor"
+                android:layout_below="@id/lblVendor"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spinner_bg"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblStatus"
+                android:layout_below="@id/spinnerVendor"
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="Select Status"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerStatus"
+                android:layout_below="@id/lblStatus"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spinner_bg"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblCompany"
+                android:layout_below="@id/spinnerStatus"
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="Select Company"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerCompany"
+                android:layout_below="@id/lblCompany"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spinner_bg"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblFilter1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:layout_below="@id/spinnerCompany"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Click arrow to Filter Based on Vendor, Status &amp; Company"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:id="@+id/imgDownArrow"
+                android:layout_below="@id/lblFilter1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/down_arrow"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:id="@+id/imgUpArrow"
+                android:layout_below="@id/spinnerCompany"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/up_arrow"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rlFilter"
+            android:layout_marginTop="10dp"
+            android:id="@+id/nsvDashboard">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="4">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/black_thin_line"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:id="@+id/lblSummaryTitle"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textAlignment="center"
+                        android:text="Summary of Financial Year 2020-21"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/black_thin_line"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rectangle_with_yellow_gradient_bg"
+                    android:layout_weight="100">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="49"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblTotalRegdOrders"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/cuprum"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="30dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textColor="@android:color/black"
+                                android:text="Total Regd.\nOrders" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/black_thin_line"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text="MRP"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:id="@+id/lblTotalRegdOrdersMRP"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text=""/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text="LP"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:id="@+id/lblTotalRegdOrdersLP"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text=""/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/white_thin_line"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="49"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="12dp"
+                                android:src="@drawable/coin"
+                                android:adjustViewBounds="true"/>
+
+                            <TextView
+                                android:id="@+id/lblTradeMarginPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/cuprum"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="30dp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textColor="@android:color/black"
+                                    android:text="Trd. Mgn." />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/lblTradeMargin"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="12dp"
+                                    android:text="" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/black_thin_line"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text="TRP"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:id="@+id/lblTradeMarginTRP"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text=""/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text="GST"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:id="@+id/lblTradeMarginGST"
+                                android:textColor="@android:color/white"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textSize="13dp"
+                                android:text=""/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="49"
+                        android:padding="3dp"
+                        android:background="@drawable/rectangle_with_green_gradient_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:src="@drawable/mail_tick"
+                                android:adjustViewBounds="true"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lblDeliveredOrders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="Delivered Orders: "
+                                android:textColor="@android:color/white"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblDeliveredOrdersLP"
+                                android:text="LP"
+                                android:textColor="@android:color/white"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:layout_marginBottom="5dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="49"
+                        android:padding="3dp"
+                        android:background="@drawable/rectangle_with_red_gradient_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:src="@drawable/mail_closed"
+                                android:adjustViewBounds="true"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblTimeoutOrders"
+                                android:text="Timeout Orders: "
+                                android:textColor="@android:color/white"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="13dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:layout_marginTop="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblTimeoutOrdersLP"
+                                android:text="LP"
+                                android:textColor="@android:color/white"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:layout_marginBottom="5dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="13dp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Total Regd. Orders = On Hand Orders + Delivered Orders"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rectangle_with_white_gradient_bg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/gift"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblOnHandOrders"
+                            android:layout_gravity="center_vertical"
+                            android:text="On Hand Orders: "
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:textSize="13dp"
+                            android:textColor="@color/blue"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblOnHandOrdersLP"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/black_thin_line"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="32"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="14dp"
+                                android:adjustViewBounds="true"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/mail"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblPendingOrders"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="Pending Orders:"
+                                android:textColor="@color/brown"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblPendingOrdersLP"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="LP"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/black_thin_line"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="32"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:adjustViewBounds="true"
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/process"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblInProgressOrders"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="In Process Orders:"
+                                android:textColor="@color/greenish"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblInProgressOrdersLP"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="LP"
+                                android:textColor="@android:color/black"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/black_thin_line"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="32"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:adjustViewBounds="true"
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/warning"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblOnHoldOrders"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="On Hold Orders: "
+                                android:textColor="@color/orange"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lblOnHoldOrdersLP"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="LP"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/black_thin_line"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textAlignment="center"
+                        android:text="Purchase Orders (P.O) (based on filters)"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/black_thin_line"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLoading"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ic_rectangle_215"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:text="Loading P.O. List...."
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlPOList"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingRight="10dp">
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/llFooter"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="top"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/yellow_thin_line"
+                android:layout_height="2dp">
+            </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="16"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:id="@+id/llHome"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_home_run"
+                        android:layout_height="28dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="Home"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:background="@drawable/light_gray_thin_line"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:id="@+id/llReports"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_summary"
+                        android:layout_height="28dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="Reports and\nQuick order"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:background="@drawable/light_gray_thin_line"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_margin="1dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llOrderStatus">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_order"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="My Orders"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/round_button_red"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textColor="#ffff"
+                            android:text="9999"
+                            android:textSize="11dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:background="@drawable/light_gray_thin_line"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llMonthwiseSummary">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_schedule"
+                        android:layout_height="28dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="Monthwise Summary"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--<fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

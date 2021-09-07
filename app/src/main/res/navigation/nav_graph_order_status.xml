@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Order_Status">
+
+    <fragment
+        android:id="@+id/Order_Status"
+        android:name="com.catch32.zumpbeta.myfragment.Fragment_Order_Status"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_orders_status">
+
+        <action
+            android:id="@+id/action_Order_Status_to_Order_Status_Details"
+            app:destination="@id/Order_Status_Details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Order_Status_Details"
+        android:name="com.catch32.zumpbeta.myfragment.Fragment_Order_Status_Details"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_orders_status_details">
+        <action
+            android:id="@+id/action_Order_Status_Details_to_Order_Status"
+            app:destination="@id/Order_Status" />
+    </fragment>
+</navigation>

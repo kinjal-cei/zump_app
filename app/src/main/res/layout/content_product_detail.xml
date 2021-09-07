@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        tools:ignore="MissingConstraints">
+
+        <androidx.core.widget.NestedScrollView
+            android:visibility="visible"
+            android:id="@+id/nsvDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        app:pager_animation="Accordion"
+                        app:auto_cycle="true"
+                        app:indicator_visibility="visible"
+                        app:pager_animation_span="1100"
+                        android:layout_height="400dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete Product Name Here"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete Product Name Here"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="15dp"/>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/yellow_thin_line_gradient2"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Trd. Mgn.: 10%"
+                        android:textSize="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:weightSum="50"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:src="@drawable/red_thin_line_gradient"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="20"
+                        android:layout_height="3dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="4 OFFERS"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="20"
+                        android:layout_gravity="center"
+                        android:src="@drawable/red_thin_line_gradient_start_color"
+                        android:layout_height="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_curved_box"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Get Free Shipping on min cart of Rs. 399"
+                                android:textStyle="bold"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Use Code “FREESHIPPING”"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#333333"
+                                android:padding="5dp"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="FREESHIPPING"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sp1"
+                        android:src="@drawable/black_gradient_line"
+                        android:layout_margin="10dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/offer2"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Get Free Shipping on min cart of Rs. 399"
+                                android:textStyle="bold"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Use Code “FREESHIPPING”"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#333333"
+                                android:padding="5dp"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="FREESHIPPING"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sp2"
+                        android:src="@drawable/black_gradient_line"
+                        android:layout_margin="10dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/offer3"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Get Free Shipping on min cart of Rs. 399"
+                                android:textStyle="bold"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Use Code “FREESHIPPING”"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#333333"
+                                android:padding="5dp"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="FREESHIPPING"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/sp3"
+                        android:src="@drawable/black_gradient_line"
+                        android:layout_margin="10dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/offer4"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Get Free Shipping on min cart of Rs. 399"
+                                android:textStyle="bold"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Use Code “FREESHIPPING”"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="10dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#333333"
+                                android:padding="5dp"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="FREESHIPPING"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/closeOffers"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="7dp"
+                            android:layout_below="@id/lblFilter1"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/up_arrow"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Close Offers"
+                            android:layout_gravity="center_vertical"/>
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="7dp"
+                            android:layout_below="@id/lblFilter1"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/up_arrow"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/moreOffers"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="7dp"
+                            android:layout_below="@id/lblFilter1"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/down_arrow"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View More Offers"
+                            android:layout_gravity="center_vertical"/>
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="7dp"
+                            android:layout_below="@id/lblFilter1"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/down_arrow"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:weightSum="50"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:src="@drawable/red_thin_line_gradient"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="15"
+                        android:layout_height="3dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="20"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="KEY FEATURES"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="15"
+                        android:layout_gravity="center"
+                        android:src="@drawable/red_thin_line_gradient_start_color"
+                        android:layout_height="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/fixed_banner_curve"
+                    android:layout_margin="7dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="18dp"
+                        android:textColor="#000000"
+                        android:text="Brand:
+\nCompany:
+\nEANS:
+\nProduct Code:
+\nOther Info:"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/red_thin_line_gradient_center"
+                        android:layout_height="3dp">
+                    </ImageView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/NewOrderNow"
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/green_curved_box"
+                    android:padding="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="22dp"
+                        android:textColor="@android:color/white"
+                        android:text="ORDER NOW"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:id="@+id/llFooter"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="top"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/yellow_thin_line"
+                android:layout_height="2dp">
+            </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="16"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:id="@+id/llHome"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_home_run"
+                        android:layout_height="28dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="Home"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:background="@drawable/light_gray_thin_line"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:id="@+id/llReports"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_summary"
+                        android:layout_height="28dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="Reports and\nQuick order"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:background="@drawable/light_gray_thin_line"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_margin="1dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llOrderStatus">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_order"
+                        android:layout_height="28dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="My Orders"/>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/round_button_red"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textColor="#ffff"
+                            android:text="9999"
+                            android:textSize="11dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:background="@drawable/light_gray_thin_line"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llMonthwiseSummary">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/ic_schedule"
+                        android:layout_height="28dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="Monthwise Summary"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

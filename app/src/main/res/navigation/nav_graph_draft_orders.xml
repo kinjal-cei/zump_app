@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Draft_Orders">
+
+    <fragment
+        android:id="@+id/Draft_Orders"
+        android:name="com.catch32.zumpbeta.myfragment.Fragment_Draft"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_draft_for_zump">
+
+        <action
+            android:id="@+id/action_Draft_Orders_to_Draft_Reports"
+            app:destination="@id/Draft_Reports" />
+    </fragment>
+    <fragment
+        android:id="@+id/Draft_Reports"
+        android:name="com.catch32.zumpbeta.myfragment.Fragment_Draft_Deatils_Reports"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_draft_details_reports">
+
+        <action
+            android:id="@+id/action_Draft_Reports_to_Draft_Orders"
+            app:destination="@id/Draft_Orders" />
+    </fragment>
+</navigation>

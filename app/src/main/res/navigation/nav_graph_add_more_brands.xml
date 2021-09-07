@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AddMoreBrands">
+
+    <fragment
+        android:id="@+id/AddMoreBrands"
+        android:name="com.catch32.zumpbeta.myfragment.Fragment_Add_More_Brands"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_add_more_brands">
+    </fragment>
+</navigation>

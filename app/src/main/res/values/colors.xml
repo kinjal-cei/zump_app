@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#2047af</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="header_title">#ececec</color>
+
+    <color name="colorAccent">@color/green_A700</color>
+    <color name="green">#00a750</color>
+    <color name="background">@color/grey_100</color>
+    <color name="backgroundLight">@color/white</color>
+    <color name="textColorDark">@color/blue_grey_700</color>
+    <color name="textColorLight">@color/blue_grey_400</color>
+    <color name="transparent">#00000000</color>
+    <color name="tabIndicatorColor">@color/white</color>
+    <color name="tabSelectedTextColor">@color/white</color>
+    <color name="tabTextColor">#99FFFFFF</color>
+    <color name="BLUE">#2027af</color>
+    <color name="BLACK">#455a64</color>
+    <color name="blue">#0010ae</color>
+    <color name="brown">#9a4943</color>
+    <color name="orange">#f18e00</color>
+    <color name="greenish">#169959</color>
+    <color name="logocolor1">#2e2f31</color>
+    <color name="yellow">#fef200</color>
+    <color name="pink">#9b4143</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="btnBlue">#0d55a9</color>
+    <color name="yellow1">#fef105</color>
+    <color name="txtblue">#2047b0</color>
+    <color name="txtpurple">#853e8c</color>
+    <color name="txtgreen">#438748</color>
+    <color name="txtmaroon">#611217</color>
+    <color name="txtskyblue">#2a7d75</color>
+    <color name="txthintcolor">#878395</color>
+
+    <array name="arcColors">
+        <item>@color/colorPrimary</item>
+        <item>@color/blue_500</item>
+    </array>
+
+</resources>

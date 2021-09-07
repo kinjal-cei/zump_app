@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_run"
+            android:title="Home"
+            android:tooltipText=""/>
+        <item
+            android:id="@+id/nav_book_my_order"
+            android:icon="@drawable/ic_bookorder"
+            android:tooltipText="@string/app_name"
+            android:title="Book My Order" />
+        <item
+            android:id="@+id/nav_order_status"
+            android:icon="@drawable/ic_online_order"
+            android:tooltipText="@string/app_name"
+            android:title="Order Status" />
+        <item
+            android:id="@+id/nav_my_order"
+            android:icon="@drawable/ic_order"
+            android:title="My Orders"/>
+        <item
+            android:id="@+id/nav_my_shop"
+            android:icon="@drawable/ic_summary"
+            android:title="Reports and Quick order" />
+        <item
+            android:id="@+id/nav_add_more_brands"
+            android:icon="@drawable/ic_friends"
+            android:title="Add More Brands" />
+        <item
+            android:id="@+id/nav_my_reward"
+            android:icon="@drawable/ic_cup"
+            android:title="My Rewards" />
+
+        <item
+            android:id="@+id/nav_my_summary"
+            android:icon="@drawable/ic_schedule"
+            android:title="Month Wise Summary" />
+        <item
+            android:id="@+id/nav_my_draft"
+            android:icon="@drawable/ic_draft_order_new"
+            android:title="Draft Orders" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_stars"
+            android:title="Order Feedback" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user_profile"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/nav_Notification"
+            android:icon="@drawable/ic_bell"
+            android:title="Notification"/>
+        <item
+            android:id="@+id/nav_policy"
+            android:icon="@drawable/ic_locked"
+            android:title="Privacy Policy"/>
+        <item
+            android:id="@+id/nav_terms_conditions"
+            android:icon="@drawable/ic_terms_and_conditions"
+            android:title="Terms and Conditions" />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/ic_exclamation"
+            android:title="About us"/>
+        <item
+            android:id="@+id/call_us"
+            android:icon="@drawable/ic_contact_us"
+            android:title="Contact us"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_user_logout"
+            android:title="Logout"/>
+    </group>
+</menu>

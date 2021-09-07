@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="Update Profile"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="normal" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_gstn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="GSTN#"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_gstn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:password="false"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_new_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="Owner Name"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_new_owner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_retype_new_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Current Address"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_retype_new_addr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_retype_new_street"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Street Name"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_retype_new_street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_retype_new_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="City/Town"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_retype_new_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_retype_new_po"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Post Office"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_retype_new_po"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_retype_new_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="PIN#"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_retype_new_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_retype_new_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Mobile"
+                    android:textColorHint="@color/grey_500"
+                    app:errorTextAppearance="@style/AppTheme.ErrorAppearance"
+                    app:hintTextAppearance="@style/AppTheme.HintAppearance"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_retype_new_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_900"
+                        android:textColorHint="@color/grey_500"
+                        android:theme="@style/AppTheme.EditText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                style="@style/BorderlessPositiveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end|right"
+                android:layout_margin="10dp"
+                android:text="Submit"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

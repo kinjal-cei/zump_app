@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.catch32.zumpapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name="com.catch32.zumpbeta.RMSApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/applogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Order_Product_Summary_Details"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Notification"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Book_My_New_Order_Activity"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Order_Status"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Order_Details_Activity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Add_More_Brands"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Draft_Orders"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.My_Rewards"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Privacy_Policy"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Feedback_Activity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Contact_Us"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.About_Us"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.TermsAndCondition"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Profile_Activity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.MyShop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Dashboard_Activity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.VendorReport"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.ProductDetail"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.My_Order_Activity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.Month_Wise_Summary"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.ProductTypeReport"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.OrderedProductReport"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.myactivity.BrandReport"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.SignInActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name="com.catch32.zumpbeta.ActivityMain"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.NewOrderActivity"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.ReportsActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.catch32.zumpbeta.activity.OrderDetails2Activity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.OrderDetailsActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.DraftReportActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.RaisedOrderReportActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.ForgotPasswordActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.UnregdUserActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.catch32.zumpbeta.activity.NewRegdActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="Instantiatable" />
+    </application>
+
+</manifest>
